@@ -1,0 +1,18 @@
+1. cd $HOME
+2. sudo apt install rclone -y
+3. rclone config
+4. n 
+5. gdrive
+6. 18
+7. client id
+8. client secret
+9. 1
+10. Leave blank
+11. Leave blank
+12. N
+13. Y
+14. Open the generated URL link with your browser and complete the authentication process
+15. N
+16. Y
+17. q
+18. rclone ls gdrive:/ to confirm successful configuration
