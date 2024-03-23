@@ -27,4 +27,4 @@
 0 0 * * * /usr/bin/find /$HOME/Videos/Logs -name "*.txt" -type f -mtime +14 -delete
 0 5 * * 0-6 /$HOME/backup.sh
 0 6 * * /$HOME/stream.sh
-30 7 * * * kill -9 $(cat /$HOME/stream.pid)
+30 19 * * * kill -9 $(cat /$HOME/stream.pid)
