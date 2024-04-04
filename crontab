@@ -22,9 +22,9 @@
 # For more information see the manual pages of crontab(5) and cron(8)
 # 
 # m h  dom mon dow   command
-55 5 * * * /usr/bin/python /$HOME/record_video.py
+55 7 * * * /usr/bin/python /$HOME/record_video.py
 0 0 * * * /usr/bin/find /$HOME/Videos -name "*.mp4" -type f -mtime +14 -delete
 0 0 * * * /usr/bin/find /$HOME/Videos/Logs -name "*.txt" -type f -mtime +14 -delete
-0 5 * * 0-6 /$HOME/backup.sh
-0 6 * * * stream /$HOME/stream.sh
-30 19 * * * pkill -u stream
+0 0 * * 0-6 /$HOME/backup.sh
+55 7 * * * stream /$HOME/stream.sh
+0 18 * * * pkill -u stream

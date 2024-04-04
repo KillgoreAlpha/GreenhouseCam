@@ -31,18 +31,18 @@ try:
         current_time = datetime.now().time()
 
         # Check if it's within the allowed time window
-        if dt_time(6, 0) <= current_time <= dt_time(19, 30):
+        if dt_time(8, 0) <= current_time <= dt_time(18, 0):
             #(7,30) = 7:30 am (24 hour format, minutes)
             # If it is, start recording for thirty minutes
             record_video()
 
         # Check if it's before the allowed time window    
-        elif dt_time(6, 0) >= current_time:
-            print("Recording will begin at 6:00AM...", file = log)
-            # Calculate time until next 6:00am
-            time_to_record = datetime.combine(datetime.now(), dt_time(6, 0))
+        elif dt_time(7, 55) >= current_time:
+            print("Recording will begin at 8:00AM...", file = log)
+            # Calculate time until next 8:00am
+            time_to_record = datetime.combine(datetime.now(), dt_time(8, 0))
             time_to_wait = time_to_record - datetime.now()
-            # Sleep until 6:00am
+            # Sleep until 8:00am
             time.sleep(time_to_wait.total_seconds())
             
         # Otherwise it's after the allowed time window   
